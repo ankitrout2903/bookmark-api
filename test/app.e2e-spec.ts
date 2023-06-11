@@ -45,8 +45,8 @@ describe('App e2e', () => {
 
   describe('Auth', () => {
     const dto: AuthDto = {
-      email: 'vlad@gmail.com',
-      password: '123',
+      email: 'ankit@gmail.com',
+      password: '12345678',
     };
     describe('Signup', () => {
       it('should throw if email empty', () => {
@@ -134,9 +134,9 @@ describe('App e2e', () => {
     describe('Edit user', () => {
       it('should edit user', () => {
         const dto: EditUserDto = {
-          firstName: 'Vladimir',
-          email: 'vlad@codewithvlad.com',
-          lastName: ''
+          firstName: 'Anky',
+          email: 'ankiy@maily.com',
+          lastName: 'hero'
         };
         return pactum
           .spec()
@@ -168,8 +168,8 @@ describe('App e2e', () => {
 
     describe('Create bookmark', () => {
       const dto: CreateBookmarkDto = {
-        title: 'First Bookmark',
-        link: 'https://www.youtube.com/watch?v=d6WC5n9G_sM',
+        title: 'gigachat',
+        link: 'https://gigachat.app/',
       };
       it('should create bookmark', () => {
         return pactum
@@ -214,10 +214,9 @@ describe('App e2e', () => {
     describe('Edit bookmark by id', () => {
       const dto: EditBookmarkDto = {
         title:
-          'Kubernetes Course - Full Beginners Tutorial (Containerize Your Apps!)',
+          'gigachat chat bot)',
         description:
-          'Learn how to use Kubernetes in this complete course. Kubernetes makes it possible to containerize applications and simplifies app deployment to production.',
-      };
+          'Russian chat app to beat chatgpt'};
       it('should edit bookmark', () => {
         return pactum
           .spec()
