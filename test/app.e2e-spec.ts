@@ -4,6 +4,7 @@ import * as pactum from 'pactum';
 import { INestApplication, ValidationPipe } from '@nestjs/common';
 import { PrismaService } from '../src/prisma/prisma.service';
 import { AuthDto } from '../src/auth/dto/auth.dto';
+import { EditUserDto } from '../src/user/dto/edit-user.dto';
 
 describe('App e2e', () => {
   let app: INestApplication;
@@ -99,23 +100,42 @@ describe('App e2e', () => {
     describe('Get me', () => {
       it('should get current user', () => {
 
- return pactum.spec()
+        return pactum.spec()
           .get('/users/me')
           .withHeaders({
-            Authorization:'Bearer $S{userAt}'
+            Authorization: 'Bearer $S{userAt}'
           })
           .inspect()
           .expectStatus(200)
+      });
     });
+    describe('edit user', () => { 
+      it('should edit current user', () => {
+        const dto : EditUserDto = {
+          firstName: 'Anky',
+          email: 'ankir@hello.com',
+          lastName: 'Rout',
+        }
+        return pactum.spec()
+                 .patch('/users')
+                 .withHeaders({
+                   Authorization:'Bearer $S{userAt}'
+                 })
+                 .inspect()
+                 .withBody(dto)
+                 .expectStatus(200)
+                 .expectBodyContains(dto.firstName)
+                  .expectBodyContains(dto.lastName)
+                  .expectBodyContains(dto.email)
+           });
     });
-    describe('edit user', () => {});
   });
 
   describe('Bookmarks', () => {
-    describe('Create Bookmark', () => {});
-    describe('Get bookmarks', () => {});
-    describe('Get bookmarks by id', () => {});
-    describe('Edit bookmarks by id ', () => {});
-    describe('Delete bookmarks by id ', () => {});
+    describe('Create Bookmark', () => { });
+    describe('Get bookmarks', () => { });
+    describe('Get bookmarks by id', () => { });
+    describe('Edit bookmarks by id ', () => { });
+    describe('Delete bookmarks by id ', () => { });
   });
 });
