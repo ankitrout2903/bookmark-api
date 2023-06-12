@@ -43,6 +43,7 @@ The Bookmark API is a RESTful API that allows users to manage bookmarks. It prov
 - PostgreSQL: A powerful, open-source relational database management system.
 - JWT: JSON Web Tokens for secure authentication and authorization.
 - Jest: A JavaScript testing framework for writing unit and integration tests.
+- Docker: A containerization platform for building, deploying, and running applications.
 
 ## Installation
 
