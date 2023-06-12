@@ -61,6 +61,9 @@ $ yarn install
 
 ## Running the app
 
+Install Docker desktop before running api
+https://www.docker.com/products/docker-desktop/
+
 ```bash
 # development
 $ yarn run start
