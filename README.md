@@ -26,6 +26,33 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+# Bookmark API
+
+The Bookmark API is a RESTful API that allows users to manage bookmarks. It provides endpoints for creating, retrieving, updating, and deleting bookmarks, as well as user authentication and authorization.
+
+## Features
+
+- User authentication: Users can sign up, sign in, and obtain access tokens for authentication.
+- Bookmark management: Users can create, retrieve, update, and delete bookmarks.
+- User management: Users can retrieve their own user profile and update their user information.
+
+## Technologies Used
+
+- Nest.js: A progressive Node.js framework for building efficient and scalable server-side applications.
+- Prisma: A modern database toolkit for Node.js and TypeScript.
+- PostgreSQL: A powerful, open-source relational database management system.
+- JWT: JSON Web Tokens for secure authentication and authorization.
+- Jest: A JavaScript testing framework for writing unit and integration tests.
+- Docker: A containerization platform for building, deploying, and running applications.
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/ankitrout2903/bookmark-api.git
+
+
 ## Installation
 
 ```bash
@@ -33,6 +60,9 @@ $ yarn install
 ```
 
 ## Running the app
+
+Install Docker desktop before running api
+https://www.docker.com/products/docker-desktop/
 
 ```bash
 # development
@@ -57,17 +87,3 @@ $ yarn run test:e2e
 # test coverage
 $ yarn run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
