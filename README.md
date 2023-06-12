@@ -26,6 +26,32 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+# Bookmark API
+
+The Bookmark API is a RESTful API that allows users to manage bookmarks. It provides endpoints for creating, retrieving, updating, and deleting bookmarks, as well as user authentication and authorization.
+
+## Features
+
+- User authentication: Users can sign up, sign in, and obtain access tokens for authentication.
+- Bookmark management: Users can create, retrieve, update, and delete bookmarks.
+- User management: Users can retrieve their own user profile and update their user information.
+
+## Technologies Used
+
+- Nest.js: A progressive Node.js framework for building efficient and scalable server-side applications.
+- Prisma: A modern database toolkit for Node.js and TypeScript.
+- PostgreSQL: A powerful, open-source relational database management system.
+- JWT: JSON Web Tokens for secure authentication and authorization.
+- Jest: A JavaScript testing framework for writing unit and integration tests.
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/ankitrout2903/bookmark-api.git
+
+
 ## Installation
 
 ```bash
